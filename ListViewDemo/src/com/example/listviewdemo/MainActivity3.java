@@ -1,6 +1,7 @@
 package com.example.listviewdemo;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 
@@ -17,8 +18,19 @@ public class MainActivity3 extends ListActivity {
         words[1] = "Jakarta";
         
         ListImageAdapter adapter = new ListImageAdapter(this, images, words);
-        setListAdapter(adapter);
+        setListAdapter(adapter);    
+        
+       
     }
+    
+    protected void onListItemClick(android.widget.ListView l, android.view.View v, int position, long id) {
+    	Intent intent = new Intent(this, DetailListActivity.class);
+    	intent.putExtra("COUNTRY", words[position]);
+    	intent.putExtra("CAPITAL", words[position]);
+    	intent.putExtra("DESC", words[position]);
+    	startActivity(intent);
+    }
+    
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
