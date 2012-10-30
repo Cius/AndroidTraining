@@ -18,41 +18,49 @@ import android.widget.Toast;
 
 public class MainActivity2 extends Activity implements OnItemClickListener {
 	List<Map<String, String>> items = new ArrayList<Map<String,String>>();
+	Menu myMenu;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_activity2);
-        
-        for(int i = 0; i < 5; i++) {
-        	Map<String, String> map = new HashMap<String, String>();
-            
-            map.put("COUNTRY", "Country" + i);
-            map.put("CAPITAL", "Capital" + i);
-            map.put("DESC", "Description" + i);
-            items.add(map);
-        }
-        
-        ListView listView = (ListView) findViewById(R.id.list2);
-        String[] from = new String[]{"COUNTRY", "CAPITAL"};
-        int[] to = new int[]{android.R.id.text2, android.R.id.text1};
-        
-        SimpleAdapter adapter = new SimpleAdapter(this, items, android.R.layout.simple_list_item_2, from, to);
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(this);
-//        registerForContextMenu(listView);
-    }
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main_activity2);
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_main_activity2, menu);
-        return true;
-    }
+		for(int i = 0; i < 5; i++) {
+			Map<String, String> map = new HashMap<String, String>();
+
+			map.put("COUNTRY", "Country" + i);
+			map.put("CAPITAL", "Capital" + i);
+			map.put("DESC", "Description" + i);
+			items.add(map);
+		}
+
+		ListView listView = (ListView) findViewById(R.id.list2);
+		String[] from = new String[]{"COUNTRY", "CAPITAL"};
+		int[] to = new int[]{android.R.id.text2, android.R.id.text1};
+
+		SimpleAdapter adapter = new SimpleAdapter(this, items, android.R.layout.simple_list_item_2, from, to);
+		listView.setAdapter(adapter);
+		listView.setOnItemClickListener(this);
+		//        registerForContextMenu(listView);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		super.onCreateOptionsMenu(menu);
+
+		this.myMenu = menu;
+		menu.add(1, 1, 1, "Item 1").setIntent(new Intent(Intent.ACTION_DIAL));
+		menu.add(1, 2, 2, "Item 2");
+		menu.add(1, 3, 3, "Item 3");
+		menu.add(1, 4, 4, "Item 4");
+
+		return true;
+	}
 
 	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 		Toast.makeText(getApplicationContext(), "Kamu pasti pilih " + items.get(arg2).get("COUNTRY") + " yang ibukotanya di "
 				+ items.get(arg2).get("CAPITAL") + " ya", Toast.LENGTH_LONG).show();
-		
+
 		Intent intent = new Intent(getApplicationContext(), DetailListActivity.class);
 		intent.putExtra("CAPITAL", ((Map<String, String>) arg0.getItemAtPosition(arg2)).get("CAPITAL"));
 		intent.putExtra("COUNTRY", ((Map<String, String>) arg0.getItemAtPosition(arg2)).get("COUNTRY"));

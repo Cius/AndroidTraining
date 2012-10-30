@@ -34,7 +34,6 @@ public class MainActivity4 extends TabActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_main_activity4, menu);
-        return true;
+        return true;        
     }
 }
