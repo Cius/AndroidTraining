@@ -6,6 +6,8 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
@@ -21,6 +23,8 @@ public class MainActivity2 extends Activity {
 	
 	EditText username;
 	Context context;
+	
+	SharedPreferences preferences;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,11 @@ public class MainActivity2 extends Activity {
         button.setText("Login");
         
         username = (EditText) findViewById(R.id.editText1);
+        
+        preferences = getPref();
+		if(preferences.contains("NICKNAME")) {
+        	username.setText(preferences.getString("NICKNAME", ""));
+        }
         
         context = this;
         
@@ -61,6 +70,14 @@ public class MainActivity2 extends Activity {
 				
 				AlertDialog alertDialog = builder.create();
 				alertDialog.show();
+				
+				preferences = getPref();
+				
+				EditText editText = (EditText) v.findViewById(R.id.editText1);
+				
+				Editor editor = preferences.edit();
+				editor.putString("NICKNAME", editText.getText().toString());
+				editor.commit();
 			}
 		});
         
@@ -107,5 +124,9 @@ public class MainActivity2 extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;
+    }
+    
+    private SharedPreferences getPref() {
+    	return this.getSharedPreferences("Gameprefs", Context.MODE_PRIVATE);
     }
 }
