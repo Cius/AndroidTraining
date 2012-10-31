@@ -21,6 +21,10 @@ public class HomeActivity extends Activity implements OnClickListener {
 		
 		button1 = (Button) findViewById(R.id.button1);
 		button1.setOnClickListener(this);
+		button2 = (Button) findViewById(R.id.button2);
+		button2.setOnClickListener(this);
+		button3 = (Button) findViewById(R.id.button3);
+		button3.setOnClickListener(this);
 	}
 
 	@Override
@@ -34,6 +38,14 @@ public class HomeActivity extends Activity implements OnClickListener {
 		case R.id.button1:
 			Intent intent = new Intent(getApplicationContext(), ImageActivity.class);
 			startActivity(intent);
+			break;
+		case R.id.button2:
+			Intent intent2 = new Intent(getApplicationContext(), GPSActivity.class);
+			startActivity(intent2);
+			break;
+		case R.id.button3:
+			Intent intent3 = new Intent(getApplicationContext(), MapActivity.class);
+			startActivity(intent3);
 			break;
 		default:
 			break;
