@@ -17,15 +17,15 @@ public class MapActivity extends com.google.android.maps.MapActivity {
 	
 	MapView view;
 	MapController controller;
-	GeoPoint point;
-//	= new GeoPoint((int) (-6.541671*1E6), (int) (106.640832*1E6));
+	GeoPoint point = new GeoPoint((int) (-6.541671*1E6), (int) (106.640832*1E6));
 	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
         
-        if(this.getIntent().getExtras().containsKey("POINT")) {
+        if(this.getIntent().getExtras() != null && 
+        		this.getIntent().getExtras().containsKey("POINT")) {
         	int[] latlong = this.getIntent().getExtras().getIntArray("POINT");
         	point = new GeoPoint(latlong[0], latlong[1]);
         }
