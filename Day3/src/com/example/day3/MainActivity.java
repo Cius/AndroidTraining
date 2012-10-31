@@ -33,6 +33,7 @@ public class MainActivity extends Activity {
 				
 				Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
 				startActivity(intent);
+				finish();
 			}
 		});
         

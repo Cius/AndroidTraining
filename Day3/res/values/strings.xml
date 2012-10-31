@@ -7,5 +7,13 @@
     <string name="app_copyright">Copyright</string>
     <string name="app_icon_desc">Icon</string>
     <string name="title_activity_home">HomeActivity</string>
+    <string name="button_1">Image</string>
+    <string name="button_2">Button2</string>
+    <string name="button_3">Button3</string>
+    <string name="button_4">Button4</string>
+    <string name="title_activity_image">ImageActivity</string>
+    <string name="image_button_1">Pick Gallery</string>
+    <string name="image_button_2">Take Picture</string>
+    <string name="image_view_desc">View</string>
 
 </resources>
