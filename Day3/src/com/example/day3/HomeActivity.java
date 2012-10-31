@@ -25,6 +25,8 @@ public class HomeActivity extends Activity implements OnClickListener {
 		button2.setOnClickListener(this);
 		button3 = (Button) findViewById(R.id.button3);
 		button3.setOnClickListener(this);
+		button4 = (Button) findViewById(R.id.button4);
+		button4.setOnClickListener(this);
 	}
 
 	@Override
@@ -47,6 +49,9 @@ public class HomeActivity extends Activity implements OnClickListener {
 			Intent intent3 = new Intent(getApplicationContext(), MapActivity.class);
 			startActivity(intent3);
 			break;
+		case R.id.button4:
+			Intent intent4 = new Intent(getApplicationContext(), ListViewMapActivity.class);
+			startActivity(intent4);
 		default:
 			break;
 		}

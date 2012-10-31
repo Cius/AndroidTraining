@@ -30,26 +30,30 @@ public final class R {
         public static final int labelLat=0x7f080002;
         public static final int labelLong=0x7f080004;
         public static final int lat=0x7f080003;
+        public static final int listView1=0x7f08000e;
         public static final int lon=0x7f080005;
-        public static final int map=0x7f080010;
-        public static final int menu_settings=0x7f080011;
-        public static final int textView1=0x7f08000d;
-        public static final int textView2=0x7f08000f;
-        public static final int view1=0x7f08000e;
+        public static final int map=0x7f080012;
+        public static final int menu_settings=0x7f080013;
+        public static final int textView1=0x7f08000f;
+        public static final int textView2=0x7f080011;
+        public static final int textViewList=0x7f08000d;
+        public static final int view1=0x7f080010;
     }
     public static final class layout {
         public static final int activity_gps=0x7f030000;
         public static final int activity_home=0x7f030001;
         public static final int activity_image=0x7f030002;
-        public static final int activity_main=0x7f030003;
-        public static final int activity_map=0x7f030004;
+        public static final int activity_list_view_map=0x7f030003;
+        public static final int activity_main=0x7f030004;
+        public static final int activity_map=0x7f030005;
     }
     public static final class menu {
         public static final int activity_gps=0x7f070000;
         public static final int activity_home=0x7f070001;
         public static final int activity_image=0x7f070002;
-        public static final int activity_main=0x7f070003;
-        public static final int activity_map=0x7f070004;
+        public static final int activity_list_view_map=0x7f070003;
+        public static final int activity_main=0x7f070004;
+        public static final int activity_map=0x7f070005;
     }
     public static final class string {
         public static final int app_copyright=0x7f050004;
@@ -66,10 +70,12 @@ public final class R {
         public static final int image_button_1=0x7f05000c;
         public static final int image_button_2=0x7f05000d;
         public static final int image_view_desc=0x7f05000e;
+        public static final int list_title=0x7f050015;
         public static final int menu_settings=0x7f050001;
         public static final int title_activity_gps=0x7f05000f;
         public static final int title_activity_home=0x7f050006;
         public static final int title_activity_image=0x7f05000b;
+        public static final int title_activity_list_view_map=0x7f050014;
         public static final int title_activity_main=0x7f050002;
         public static final int title_activity_map=0x7f050013;
     }

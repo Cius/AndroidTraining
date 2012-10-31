@@ -10,7 +10,7 @@
     <string name="button_1">Image</string>
     <string name="button_2">Location</string>
     <string name="button_3">Map</string>
-    <string name="button_4">Button4</string>
+    <string name="button_4">List of Provinces</string>
     <string name="title_activity_image">ImageActivity</string>
     <string name="image_button_1">Pick Gallery</string>
     <string name="image_button_2">Take Picture</string>
@@ -20,5 +20,7 @@
     <string name="gps_label_lat">Latitude: </string>
     <string name="gps_label_long">Longitude: </string>
     <string name="title_activity_map">MapActivity</string>
+    <string name="title_activity_list_view_map">ListViewMapActivity</string>
+    <string name="list_title">List of Provinces</string>
 
 </resources>
