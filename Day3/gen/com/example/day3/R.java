@@ -31,7 +31,8 @@ public final class R {
         public static final int labelLong=0x7f080004;
         public static final int lat=0x7f080003;
         public static final int lon=0x7f080005;
-        public static final int menu_settings=0x7f080010;
+        public static final int map=0x7f080010;
+        public static final int menu_settings=0x7f080011;
         public static final int textView1=0x7f08000d;
         public static final int textView2=0x7f08000f;
         public static final int view1=0x7f08000e;
