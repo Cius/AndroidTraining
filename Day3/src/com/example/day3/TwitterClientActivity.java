@@ -8,8 +8,6 @@ import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 import android.app.ListActivity;
 import android.os.AsyncTask;
@@ -19,11 +17,13 @@ import android.widget.BaseAdapter;
 import android.widget.Toast;
 
 import com.example.day3.model.TwitterModel;
+import com.example.day3.model.TwitterModel.Tweet;
+import com.google.gson.Gson;
 
 public class TwitterClientActivity extends ListActivity {
 
 	String response = "";
-	List<TwitterModel> list = new ArrayList<TwitterModel>();
+	List<Tweet> list = new ArrayList<Tweet>();
 	
 	private BaseAdapter adapter;
 
@@ -67,18 +67,22 @@ public class TwitterClientActivity extends ListActivity {
 		protected String doInBackground(String... params) {
 			try {
 				response = getResponseFromUrl("http://search.twitter.com/search.json?q="+params[0]);
-
-				JSONObject object = new JSONObject(response);
-				JSONArray array = object.getJSONArray("results");
 				
-				for(int i = 0; i < array.length(); i++) {
-					object = array.getJSONObject(i);
-					TwitterModel model = new TwitterModel();
-					model.setFrom_user(object.getString("from_user"));
-					model.setContent(object.getString("text"));
-					
-					list.add(model);
-				}
+				Gson gson = new Gson();
+				TwitterModel model = gson.fromJson(response, TwitterModel.class);
+				list.addAll(model.getResults());
+
+//				JSONObject object = new JSONObject(response);
+//				JSONArray array = object.getJSONArray("results");
+//				
+//				for(int i = 0; i < array.length(); i++) {
+//					object = array.getJSONObject(i);
+//					TwitterModel model = new TwitterModel();
+//					model.setFrom_user(object.getString("from_user"));
+//					model.setContent(object.getString("text"));
+//					
+//					list.add(model);
+//				}
 			}catch(Exception e) {
 				return "ERROR";
 			}

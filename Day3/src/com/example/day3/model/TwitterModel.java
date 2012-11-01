@@ -1,19 +1,33 @@
 package com.example.day3.model;
 
+import java.util.List;
+
 public class TwitterModel {
-	private String from_user;
-	private String content;
-	
-	public String getFrom_user() {
-		return from_user;
+	private List<Tweet> results;
+
+	public List<Tweet> getResults() {
+		return results;
 	}
-	public void setFrom_user(String from_user) {
-		this.from_user = from_user;
+
+	public void setResults(List<Tweet> results) {
+		this.results = results;
 	}
-	public String getContent() {
-		return content;
-	}
-	public void setContent(String content) {
-		this.content = content;
+
+	public class Tweet {
+		private String from_user;
+		private String text;
+
+		public String getFrom_user() {
+			return from_user;
+		}
+		public void setFrom_user(String from_user) {
+			this.from_user = from_user;
+		}
+		public String getText() {
+			return text;
+		}
+		public void setText(String text) {
+			this.text = text;
+		}
 	}
 }

@@ -12,14 +12,15 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.day3.model.TwitterModel;
+import com.example.day3.model.TwitterModel.Tweet;
 
 public class CustomAdapter extends BaseAdapter {
 	private Activity a;
-	private List<TwitterModel> models;
+	private List<Tweet> models;
 	
 	private static LayoutInflater inflater = null;
 	
-	public CustomAdapter(Activity a, List<TwitterModel> list) {
+	public CustomAdapter(Activity a, List<Tweet> list) {
 		this.a = a;
 		models = list;
 		inflater = (LayoutInflater) a.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -45,7 +46,7 @@ public class CustomAdapter extends BaseAdapter {
 		view.setText(models.get(position).getFrom_user());
 		
 		TextView view2 = (TextView) vi.findViewById(R.id.text2);
-		view2.setText(models.get(position).getContent());
+		view2.setText(models.get(position).getText());
 		
 		return vi;
 	}
