@@ -22,5 +22,7 @@
     <string name="title_activity_map">MapActivity</string>
     <string name="title_activity_list_view_map">ListViewMapActivity</string>
     <string name="list_title">List of Provinces</string>
+    <string name="button_5">Twitter</string>
+    <string name="title_activity_twitter_client">TwitterClientActivity</string>
 
 </resources>

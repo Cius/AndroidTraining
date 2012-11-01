@@ -13,6 +13,7 @@ public class HomeActivity extends Activity implements OnClickListener {
 	Button button2;
 	Button button3;
 	Button button4;
+	Button button5;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,8 @@ public class HomeActivity extends Activity implements OnClickListener {
 		button3.setOnClickListener(this);
 		button4 = (Button) findViewById(R.id.button4);
 		button4.setOnClickListener(this);
+		button5 = (Button) findViewById(R.id.button5);
+		button5.setOnClickListener(this);
 	}
 
 	@Override
@@ -52,6 +55,10 @@ public class HomeActivity extends Activity implements OnClickListener {
 		case R.id.button4:
 			Intent intent4 = new Intent(getApplicationContext(), ListViewMapActivity.class);
 			startActivity(intent4);
+		case R.id.button5:
+			Intent intent5 = new Intent(getApplicationContext(), TwitterClientActivity.class);
+			startActivity(intent5);
+			break;
 		default:
 			break;
 		}

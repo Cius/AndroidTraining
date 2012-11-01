@@ -43,6 +43,15 @@
             android:name=".ListViewMapActivity"
             android:label="@string/title_activity_list_view_map" >
         </activity>
+        <activity
+            android:name=".TwitterClientActivity"
+            android:label="@string/title_activity_twitter_client" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
