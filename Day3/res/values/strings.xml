@@ -24,5 +24,11 @@
     <string name="list_title">List of Provinces</string>
     <string name="button_5">Twitter</string>
     <string name="title_activity_twitter_client">TwitterClientActivity</string>
+    <string name="button_6">Login</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="login_username">Username:</string>
+    <string name="login_password">Password:</string>
+    <string name="login_button_1">Login</string>
+    <string name="login_button_2">Reset</string>
 
 </resources>
