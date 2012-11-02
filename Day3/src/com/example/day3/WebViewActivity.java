@@ -28,7 +28,7 @@ public class WebViewActivity extends Activity {
 //        view.loadUrl("http://detik.com");
         
         String html = "<body>" +
-        				"<img src='file:///android_asset/ic_launcher.png'/>" +
+        				"<img src='file:///android_asset/icon.png'/>" +
         				"<p>Hello <b>World</b></p>" +
         				"<input type='button' value='Say Hello' onClick=showAndroidToast()></input>" +
         				"<script type='text/javascript'>" +
