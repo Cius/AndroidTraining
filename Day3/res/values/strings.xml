@@ -36,5 +36,6 @@
     <string name="notif_hint_1">Ticker</string>
     <string name="notif_hint_2">Title</string>
     <string name="notif_hint_3">Message</string>
+    <string name="title_activity_grid_view">GridViewActivity</string>
 
 </resources>

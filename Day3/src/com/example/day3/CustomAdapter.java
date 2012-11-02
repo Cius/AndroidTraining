@@ -2,16 +2,16 @@ package com.example.day3;
 
 import java.util.List;
 
-import android.R;
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.day3.model.TwitterModel;
+import com.example.day3.imageloader.ImageLoader;
 import com.example.day3.model.TwitterModel.Tweet;
 
 public class CustomAdapter extends BaseAdapter {
@@ -40,13 +40,17 @@ public class CustomAdapter extends BaseAdapter {
 
 	public View getView(int position, View convertView, ViewGroup parent) {
 		View vi = convertView;
-		vi = inflater.inflate(R.layout.simple_list_item_2, null);
+		vi = inflater.inflate(R.layout.row_twitter, null);
 		
-		TextView view = (TextView) vi.findViewById(R.id.text1);
+		TextView view = (TextView) vi.findViewById(R.id.tw_text1);
 		view.setText(models.get(position).getFrom_user());
 		
-		TextView view2 = (TextView) vi.findViewById(R.id.text2);
+		TextView view2 = (TextView) vi.findViewById(R.id.tw_text2);
 		view2.setText(models.get(position).getText());
+		
+		ImageView imageView = (ImageView) vi.findViewById(R.id.tw_logo);
+		ImageLoader loader = new ImageLoader(a.getApplicationContext());
+		loader.DisplayImage(models.get(position).getProfile_image_url(), imageView);
 		
 		return vi;
 	}
