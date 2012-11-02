@@ -39,5 +39,6 @@
     <string name="title_activity_grid_view">GridViewActivity</string>
     <string name="button_8">GridView</string>
     <string name="title_activity_web_view">WebViewActivity</string>
+    <string name="button_9">WebView</string>
 
 </resources>

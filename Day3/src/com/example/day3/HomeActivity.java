@@ -17,6 +17,7 @@ public class HomeActivity extends Activity implements OnClickListener {
 	Button button6;
 	Button button7;
 	Button button8;
+	Button button9;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,8 @@ public class HomeActivity extends Activity implements OnClickListener {
 		button7.setOnClickListener(this);
 		button8 = (Button) findViewById(R.id.button8);
 		button8.setOnClickListener(this);
+		button9 = (Button) findViewById(R.id.button9);
+		button9.setOnClickListener(this);
 	}
 
 	@Override
@@ -79,6 +82,10 @@ public class HomeActivity extends Activity implements OnClickListener {
 		case R.id.button8:
 			Intent intent8 = new Intent(getApplicationContext(), GridViewActivity.class);
 			startActivity(intent8);
+			break;
+		case R.id.button9:
+			Intent intent9 = new Intent(getApplicationContext(), WebViewActivity.class);
+			startActivity(intent9);
 			break;
 		default:
 			break;
