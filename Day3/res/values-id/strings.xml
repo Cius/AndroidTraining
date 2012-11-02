@@ -28,5 +28,6 @@
     <string name="notif_hint_1">Ticker</string>
     <string name="notif_hint_2">Judul</string>
     <string name="notif_hint_3">Pesan</string>
+    <string name="button_8">GridView</string>
 
 </resources>

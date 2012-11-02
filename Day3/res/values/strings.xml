@@ -37,5 +37,7 @@
     <string name="notif_hint_2">Title</string>
     <string name="notif_hint_3">Message</string>
     <string name="title_activity_grid_view">GridViewActivity</string>
+    <string name="button_8">GridView</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
 
 </resources>

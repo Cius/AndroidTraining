@@ -22,39 +22,41 @@ public final class R {
     }
     public static final class id {
         public static final int LinearLayout1=0x7f080000;
-        public static final int button1=0x7f080006;
-        public static final int button2=0x7f080007;
-        public static final int button3=0x7f080008;
-        public static final int button4=0x7f080009;
-        public static final int button5=0x7f08000a;
-        public static final int button6=0x7f08000b;
-        public static final int button7=0x7f08000c;
+        public static final int button1=0x7f080007;
+        public static final int button2=0x7f080008;
+        public static final int button3=0x7f080009;
+        public static final int button4=0x7f08000a;
+        public static final int button5=0x7f08000b;
+        public static final int button6=0x7f08000c;
+        public static final int button7=0x7f08000d;
+        public static final int button8=0x7f08000e;
         public static final int buttonGps1=0x7f080001;
-        public static final int buttonImage1=0x7f08000e;
-        public static final int buttonImage2=0x7f08000f;
-        public static final int buttonLogin1=0x7f080016;
-        public static final int buttonLogin2=0x7f080017;
-        public static final int editText1=0x7f080013;
-        public static final int editText2=0x7f080015;
-        public static final int imageView1=0x7f08000d;
+        public static final int buttonImage1=0x7f080010;
+        public static final int buttonImage2=0x7f080011;
+        public static final int buttonLogin1=0x7f080018;
+        public static final int buttonLogin2=0x7f080019;
+        public static final int editText1=0x7f080015;
+        public static final int editText2=0x7f080017;
+        public static final int gridView1=0x7f080006;
+        public static final int imageView1=0x7f08000f;
         public static final int labelLat=0x7f080002;
         public static final int labelLong=0x7f080004;
         public static final int lat=0x7f080003;
-        public static final int listView1=0x7f080011;
+        public static final int listView1=0x7f080013;
         public static final int lon=0x7f080005;
-        public static final int map=0x7f080019;
-        public static final int menu_settings=0x7f080021;
-        public static final int notifButton1=0x7f08001d;
-        public static final int notif_edit_1=0x7f08001a;
-        public static final int notif_edit_2=0x7f08001b;
-        public static final int notif_edit_3=0x7f08001c;
-        public static final int textView1=0x7f080012;
-        public static final int textView2=0x7f080014;
-        public static final int textViewList=0x7f080010;
-        public static final int tw_logo=0x7f08001e;
-        public static final int tw_text1=0x7f08001f;
-        public static final int tw_text2=0x7f080020;
-        public static final int view1=0x7f080018;
+        public static final int map=0x7f08001b;
+        public static final int menu_settings=0x7f080023;
+        public static final int notifButton1=0x7f08001f;
+        public static final int notif_edit_1=0x7f08001c;
+        public static final int notif_edit_2=0x7f08001d;
+        public static final int notif_edit_3=0x7f08001e;
+        public static final int textView1=0x7f080014;
+        public static final int textView2=0x7f080016;
+        public static final int textViewList=0x7f080012;
+        public static final int tw_logo=0x7f080020;
+        public static final int tw_text1=0x7f080021;
+        public static final int tw_text2=0x7f080022;
+        public static final int view1=0x7f08001a;
     }
     public static final class layout {
         public static final int activity_gps=0x7f030000;
@@ -80,6 +82,7 @@ public final class R {
         public static final int activity_map=0x7f070007;
         public static final int activity_notification=0x7f070008;
         public static final int activity_twitter_client=0x7f070009;
+        public static final int activity_web_view=0x7f07000a;
     }
     public static final class string {
         public static final int app_copyright=0x7f050004;
@@ -92,6 +95,7 @@ public final class R {
         public static final int button_5=0x7f050016;
         public static final int button_6=0x7f050018;
         public static final int button_7=0x7f05001e;
+        public static final int button_8=0x7f050025;
         public static final int gps_button_1=0x7f050010;
         public static final int gps_label_lat=0x7f050011;
         public static final int gps_label_long=0x7f050012;
@@ -119,6 +123,7 @@ public final class R {
         public static final int title_activity_map=0x7f050013;
         public static final int title_activity_notification=0x7f05001f;
         public static final int title_activity_twitter_client=0x7f050017;
+        public static final int title_activity_web_view=0x7f050026;
     }
     public static final class style {
         public static final int AppTheme=0x7f060000;
