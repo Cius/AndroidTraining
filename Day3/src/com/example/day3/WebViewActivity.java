@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 public class WebViewActivity extends Activity {
 	WebView view;
@@ -21,6 +22,7 @@ public class WebViewActivity extends Activity {
         settings.setJavaScriptEnabled(true);
         
         view.setWebViewClient(new WebViewClient());
+        view.addJavascriptInterface(new JavaScriptInterface(), "Brainmatics");
         
 //        view.loadUrl("http://saungandroid.com");
 //        view.loadUrl("http://detik.com");
@@ -28,16 +30,22 @@ public class WebViewActivity extends Activity {
         String html = "<body>" +
         				"<img src='file:///android_asset/ic_launcher.png'/>" +
         				"<p>Hello <b>World</b></p>" +
-        				"<input type='button' value='Say Hello' onClick=showAndroidToast('Hello')></input>" +
+        				"<input type='button' value='Say Hello' onClick=showAndroidToast()></input>" +
         				"<script type='text/javascript'>" +
-        					"function showAndroidToast(toast) {" +
-        						"alert('hello');" +
+        					"function showAndroidToast() {" +
+        						"Brainmatics.testJs('Hello');" +
         					"}" +
         				"</script>" +
         			"</body>";
         view.loadDataWithBaseURL("", html, "text/html", "utf-8", "");
     }
 
+    class JavaScriptInterface {
+    	public void testJs(String text) {
+    		Toast.makeText(getApplicationContext(), text, Toast.LENGTH_LONG).show();
+    	}
+    }
+    
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_web_view, menu);
